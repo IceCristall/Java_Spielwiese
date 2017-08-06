@@ -6,12 +6,12 @@ public class PfannkuchenEssen {
 
 		Pfannkuchenstapel s = new Pfannkuchenstapel(3);
 		
-		Bäcker bäcker1 = new Bäcker();
-		Bäcker bäcker2 = new Bäcker();
+		Bäcker bäcker1 = new Bäcker("Mutter", 19999, s);
+		Bäcker bäcker2 = new Bäcker("Sternekoch",10000,s);
 		
-		Esser esser1 = new Esser();
-		Esser esser2 = new Esser();
-		Esser esser3 = new Esser();
+		Esser esser1 = new Esser("testesser1",20000 ,s);
+		Esser esser2 = new Esser("testesser2",15900 ,s);
+		Esser esser3 = new Esser("testesser3",30000 ,s);
 		
 		do {
 			try {
@@ -22,9 +22,9 @@ public class PfannkuchenEssen {
 		} while (s.getStapel() < 3);
 
 		System.out.println("Das Essen startet");
-//		esser1.start();
-//		esser2.start();
-//		esser3.start();
+		esser1.run();
+		esser2.run();
+		esser3.run();
 		
 		
 	}
